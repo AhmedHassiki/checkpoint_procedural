@@ -1,0 +1,42 @@
+PROCEDURE dot_product(V1,V2: ARRAY_OF IR)
+VAR
+  i, ps : INTEGER
+BEGIN
+  ps:=0  
+  FOR i FROM 0 TO V1.length STEP -1 DO
+    ps:= ps+ V1[i]*V2[i]
+  END_FOR
+END
+
+ALGORITHM orthoganl(n:IR)
+VAR
+  n:IR
+BEGIN
+
+  read (V1)
+  read (V2)
+  dot_product(V1,V2)
+
+  
+    IF (dot_product = 0 ) THEN
+      print("Vectors are orthogonal.")
+    ELSE
+      print("Vectors are not orthogonal.")
+    END_IF
+  END_IF
+
+  
+END 
+
+// Conversion to Function
+
+FUNCTION dot_product(V1,V2: ARRAY_OF IR) : INTEGER
+VAR
+  i, ps : INTEGER
+BEGIN
+  ps:=0  
+  FOR i FROM 0 TO V1.length STEP -1 DO
+    ps:= ps+ V1[i]*V2[i]
+  END_FOR
+  RETURN ps
+END
